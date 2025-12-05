@@ -29,6 +29,13 @@ function Home() {
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: "20px" }}>
         {items.map((item) => (
           <div key={item.id} style={{ border: "1px solid #ccc", padding: "15px", borderRadius: "8px" }}>
+            {item.imageUrl && (
+                <img 
+                    src={item.imageUrl} 
+                    alt={item.name} 
+                    style={{ width: "100%", height: "200px", objectFit: "cover", borderRadius: "5px" }} 
+                />
+            )}
             <h3>{item.name}</h3>
             <p><strong>Status:</strong> {item.status}</p>
             <p>{item.description}</p>

@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Creating a central "client" so we can config it once
 const api = axios.create({
-    baseURL: 'http://localhost:8080', // Connecting to Spring Boot
+    baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080', // Connecting to Spring Boot
 });
 
 api.interceptors.request.use(
