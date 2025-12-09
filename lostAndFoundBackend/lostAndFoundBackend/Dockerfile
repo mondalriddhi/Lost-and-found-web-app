@@ -1,11 +1,11 @@
-# 1. Build Stage
-FROM maven:3.8.5-openjdk-17 AS build
+# 1. Build Stage (Updated to Java 21)
+FROM maven:3.9.9-eclipse-temurin-21 AS build
 WORKDIR /app
 COPY . .
 RUN mvn clean package -DskipTests
 
-# 2. Run Stage
-FROM openjdk:17.0.1-jdk-slim
+# 2. Run Stage (Updated to Java 21)
+FROM eclipse-temurin:21-jre
 WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 EXPOSE 8080
