@@ -71,7 +71,7 @@ The application uses a **RESTful API** design pattern.
 
 | Login & Auth | Dashboard | Report Item |
 |:---:|:---:|:---:|
-| *(![Login & Auth]login.png)* | *(![Dashboard]dashboard.png)* | *(![Report Item]reportItem.png)* |
+| *(![Login & Auth](login.png))* | *(![Dashboard](dashboard.png))* | *(![Report Item](reportItem.png))* |
 
 
 ---
